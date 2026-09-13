@@ -1,14 +1,15 @@
 import React from 'react';
+import Tarjeta from './Tarjeta';
 
 function App() {
   return (
     <div className="app-container">
-      <header style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1>Taller React: Tarjeta de Presentación</h1>
-        <p>Configuración base del entorno con Vite y React.</p>
+      <header style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+        <h1 style={{ fontSize: '2.2rem', color: '#38bdf8' }}>Módulo 4: Intro a React</h1>
+        <p style={{ color: '#94a3b8' }}>Componente Funcional y Sintaxis JSX básica</p>
       </header>
-      <main style={{ textAlign: 'center' }}>
-        <p>Proyecto inicializado exitosamente en React.</p>
+      <main>
+        <Tarjeta />
       </main>
     </div>
   );
