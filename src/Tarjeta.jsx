@@ -1,27 +1,21 @@
 import React from 'react';
+import './Tarjeta.css';
 
-// Componente Funcional Tarjeta - Version inicial con datos estaticos y sintaxis JSX
 function Tarjeta() {
-  // Datos estaticos definidos localmente segun las lecturas de JSX
   const nombre = "Ana Pérez";
   const profesion = "Desarrolladora Web Full Stack";
-  const mensaje = "¡Bienvenido a mi tarjeta de presentación creada con React y JSX!";
+  const mensaje = "Apasionada por crear experiencias web interactivas con React, JavaScript moderno y diseño UI centrado en el usuario.";
+  const avatar = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=250&auto=format&fit=crop&q=80";
 
   return (
-    <div style={{
-      backgroundColor: '#1e293b',
-      border: '1px solid #334155',
-      borderRadius: '16px',
-      padding: '24px',
-      maxWidth: '360px',
-      margin: '0 auto',
-      textAlign: 'center',
-      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)'
-    }}>
-      {/* Expresiones dinamicas en JSX mediante llaves {} */}
-      <h2 style={{ color: '#38bdf8', marginBottom: '8px' }}>{nombre}</h2>
-      <h4 style={{ color: '#94a3b8', fontWeight: '400', marginBottom: '16px' }}>{profesion}</h4>
-      <p style={{ color: '#cbd5e1', fontSize: '14px', lineHeight: '1.6' }}>{mensaje}</p>
+    <div className="tarjeta-card">
+      <span className="badge-status">● Disponible para proyectos</span>
+      <div className="tarjeta-avatar-container">
+        <img className="tarjeta-avatar" src={avatar} alt={`Foto de ${nombre}`} />
+      </div>
+      <h2 className="tarjeta-nombre">{nombre}</h2>
+      <h4 className="tarjeta-profesion">{profesion}</h4>
+      <p className="tarjeta-mensaje">{mensaje}</p>
     </div>
   );
 }
